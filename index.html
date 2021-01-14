@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Proyecto</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+<body>
+<!--NAVEGACION-->
+<header class="header">
+    <div class="logo">
+        <img src="./assets/img/logo.svg" alt="logo" class="img-logo">
+    </div>
+    <input type="checkbox" id="check" class="check">
+    <label for="check" class="del">
+        <span class="burger"></span>
+        <span class="closed"></span>
+    </label>
+    <div class="menu">
+        <a href="#episodio">
+            <div class="item-menu episode">
+            Episodios
+            </div>
+        </a>
+        <a href="#from">
+            <div class="item-menu us">
+                Nosotros
+            </div>
+        </a>
+        <a href="#invited">
+            <div class="item-menu interview">
+                Entrevistas
+            </div>
+        </a>
+        <a href="#topic">
+            <div class="item-menu topical">
+                Tópicos
+            </div>
+        </a>
+    </div> 
+</header>
+<!--TITULO Y DESCRIPCION-->
+<section class="title-section">
+    <h1 class="title">Hello <span class="world">world</span> <br> pale blue dot<span class="point">.</span></h1>
+    <p class="text-movile"> Un podcast que explora el mundo de<br> la programación. Nuevos episodios,<br> todos los jueves cada 15 dias.</p>
+    <p class="text-desktop"> El portal de podcast que explora el mundo de la programación y <br>la tecnologia. Nuevos episodios, todos los jueves cada 15 dias.</p>
+    <button class="know-more">
+        <span class="text-button">CONOCÉ MÁS</span>
+    </button>
+</section>
+<!--SECCION EPISODIO Y FONDO AZUL-->
+<section class="episode-section">
+    <h2 class="title-episode" id="episodio">Episodios</h2>
+    <div class="content-spotify">
+        <div class="jsparty spotify">
+            <iframe src="https://open.spotify.com/embed-podcast/episode/6eCHJ8yOYtksW8OT93Dbdu"></iframe>
+        </div>
+        <div class="syntax spotify">
+            <iframe src="https://open.spotify.com/embed-podcast/episode/1ezdL2ivAGLwSE6Xbssxqt"></iframe>
+        </div>
+        <div class="rework spotify">
+            <iframe src="https://open.spotify.com/embed-podcast/episode/3cWta1iiQSfvrdHaCbLkSD"></iframe>
+        </div>
+        <div class="ruby spotify">
+            <iframe src="https://open.spotify.com/embed-podcast/episode/31VyAQAwBiKoHVoYUCEzjQ"></iframe>
+        </div>
+    </div>
+</section>
+<!--SECCION PHONE-->
+<section class="phone-section">
+    <img src="./assets/img/phone.png" alt="celular" class="img-phone">
+    <div class="content-display">
+        <h2 class="title-from" id="from">De dónde<br> venimos</h2>
+        <div class="content-text-from">
+            <p class="text-just one">
+                Our posturings, our imagined self-<br> importance, the delusion that we<br> have some priviliged position in<br> the Universe, are challenged by<br> this point of pale light.
+            </p>
+            <p class="text-just two">
+                Our planet is a lonely speck in<br> the great enveloping cosmic dark.<br> In our obscurity, in all this<br> vastness, there is no hint that<br> help will come from elsewhere to<br> save us from ourselves.   
+            </p>
+        </div>
+    </div>
+</section>
+<!--SECCION INVITADOS-->
+<section class="invited-section" id="invited">
+    <h1 class="title-invited">Invitadas/os estelares</h1>
+    <div class="content-img-invited">
+        <img src="./assets/img/grace-hopper.png" alt="grace" class="img-invited">
+        <img src="./assets/img/Katie-Bouman.png" alt="Katie" class="img-invited">
+        <img src="./assets/img/Margaret_Hamilton.png" alt="Margaret" class="img-invited">
+        <img src="./assets/img/E.R.A.png" alt="E.R.A" class="img-invited">
+        <img src="./assets/img/Computer-operators.png" alt="Computer" class="img-invited">
+        <img src="./assets/img/susan-kare.png" alt="Susan" class="img-invited">
+    </div>
+</section>
+<!--SECCION TEMAS-->
+<section class="topic-section" id="topic">
+    <h2 class="topic-title">Algunos de nuestros temas</h2>
+    <div class="content-topic-display">
+        <div class="work topic">
+            <img src="./assets/img/icon1.svg" alt="trabajo remoto" class="img-work topic-img">
+            <p class="text-work topic-text">Trabajo remoto</p>
+        </div>
+        <div class="programming topic">
+            <img src="./assets/img/icon2.svg" alt="programando" class="img-programming topic-img">
+            <p class="text-programming topic-text">Repensando la <br> programación</p>
+        </div>
+        <div class="code topic">
+            <img src="./assets/img/icon3.svg" alt="codigo" class="img-code topic-img">
+            <p class="text-security topic-text">Bases del código</p>
+        </div>
+        <div class="security topic">
+            <img src="./assets/img/icon4.svg" alt="seguridad" class="img-security topic-img">
+            <p class="text-security topic-text">Seguridad <br> informática</p>
+        </div>
+    </div>
+</section>
+<!--SECCION DE NOVEDADES-->
+<section class="novelity-section">
+    <h3 class="novelity-title">¿Querés<br> las últimas<br> novedades?</h3>
+    <button class="novelity-button">ESCUCHÁ LOS EPISODIOS</button>
+</section>
+<!--SECCION FOOTER-->
+<footer class="footer-section">
+    <p class="footer-text">© 2019— Hello blue pale dot</p>
+    <div class="footer-content">
+        <a href="https://open.spotify.com/episode/2OjI190SU1Y8qV3RDs8zyW">
+            <i class="fab fa-spotify footer-img"></i>
+        </a>
+        <a href="https://www.instagram.com/acamica/?hl=es-la">
+            <i class="fab fa-instagram footer-img"></i>
+        </a>
+        <a href="https://twitter.com/Acamica_com">    
+            <i class="fab fa-twitter footer-img"></i>
+        </a>
+        <a href="https://www.facebook.com/Acamica.org/">
+            <i class="fab fa-facebook footer-img"></i>
+        </a>
+        <a href="https://web.telegram.org/">
+            <i class="fab fa-telegram footer-img"></i>
+        </a>    
+    </div>
+</footer>
+</body>
+</html>

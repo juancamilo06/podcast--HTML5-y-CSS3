@@ -1,0 +1,680 @@
+@import 'reset.scss';
+@import 'typography.scss';
+@import 'variables.scss';
+//NAVEGACION
+.header{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    background: $color-title-back;
+    height: 44px;
+    width: 100%;
+    .logo{
+        margin: 10px 0 10px 16px;   
+    }
+    .del{
+        margin:16px 19px 16px 0;
+    }  
+    .burger{
+        position: relative;
+        margin: 16px 19px 16px 0;  
+        width: 18px;
+        height: 12px;
+        cursor: pointer;
+    }
+    .burger:after{
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 18px;
+        height: 2px;
+        background: black;
+        box-shadow:0 5px 0 0 black,
+                   0 10px 0 0 black;                   
+    }
+    .closed{
+        position: relative;
+        width:14px;
+        height:14px;
+        cursor: pointer;     
+    }
+    .closed:after{
+        content: "";
+        position: absolute;
+        top: 6px;
+        right: -2px;
+        width: 18px;
+        height: 2px;
+        background: $color-primary;
+        transform: rotate(135deg);  
+    }
+        .closed:before{
+            content: "";
+            position: absolute;
+            top: 6px;
+            right: -2px;
+            width: 18px;
+            height: 2px;
+            background: $color-primary;
+            transform: rotate(45deg);  
+        }
+        .menu{
+            position: absolute;
+            background:$color-back;
+            left: 0;
+            width: 100%;
+            top: 44px;
+            padding-top: 16px;
+            .item-menu{
+                letter-spacing: 0;
+                line-height: 28px;
+                color:$color-title-back;
+                padding: 0 0 24px 16px;
+                font-family: $typography-items;
+                font-size: 16px;
+                text-transform: uppercase;
+            }        
+        }
+        .check{
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .menu,.closed{
+            display: none;
+        }
+        .check:checked ~ label .burger{
+            display: none;
+        }
+        .check:checked ~ label .closed, .check:checked ~ .menu{
+            display: block;
+        }    
+}
+//TITULO Y DESCRIPCION 
+.title-section{
+    margin: 29px 16px 0px 16px;
+    .title{
+        font-family: $typography-titles;
+        font-size: 36px;
+        color: $color-primary;
+        letter-spacing: 0;
+        line-height: 42px;
+        margin-bottom: 16px;
+        .world{
+            text-decoration: line-through;  
+        }
+    }
+    .text-movile, .text-desktop{  
+        font-family: $typography-items;
+        font-size: 14px;
+        color: $color-primary;
+        letter-spacing: 0;
+        line-height: 24px;
+        margin-bottom: 36px;    
+    }
+    .text-desktop{
+        display: none;
+    }
+    .know-more{
+        font-family: $typography-buttons;
+        font-size: 16px;
+        color: $color-primary;
+        letter-spacing: 0;
+        text-align: center;
+        line-height: 22px;
+        width: 288px;
+        height: 48px; 
+        background: $color-button;     
+    }
+}
+//SECCION EPISODIO -FONDO AZUL
+.episode-section{
+    position: relative;
+    &::after{
+        display: block;
+        content: '';
+        background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+        position: absolute;
+        width: 100%;
+        height: 116%;
+        top: 0;
+        margin-top: -46px;
+        left: 0;
+        z-index: -2;
+        transform: skew(0, -5deg); 
+    }
+    .title-episode{
+        font-family: $typography-titles;
+        color: $color-title-back;
+        font-size: 36px;
+        letter-spacing: 0;
+        line-height: 42px;
+        margin: 88px 0 21px 16px;
+    }
+    .spotify{
+        padding: 0 11px;
+    }
+    .spotify iframe{
+        width:100%; 
+        height: 260px;
+        border: none;
+    }
+    .ruby{
+        margin-bottom: 175px;  
+    }
+}
+//SECCION PHONE
+.phone-section{
+    text-align: center;
+    margin-top: -120px;
+    width: 100%;
+    .img-phone{
+        width: 320PX;
+    }
+    .title-from{
+        text-align: left;
+        font-family: $typography-titles;
+        font-size: 36px;
+        color:$color-primary;
+        letter-spacing: 0;
+        line-height: 42px;
+        margin: 27px 16px 8px 16px;
+    }
+    .content-text-from{
+        text-align: left;
+        font-family: $typography-items;
+        font-size: 14px;
+        color: $color-primary;
+        letter-spacing: 0;
+        line-height: 22px;
+        margin: 0 16px;
+        .one{
+            margin-bottom: 10px;    
+        }
+    }
+}
+//SECCION INVITADOS
+.invited-section{
+    .title-invited{
+        font-family: $typography-titles;
+        font-size: 36px;
+        color:$color-primary;
+        letter-spacing: 0;
+        line-height: 42px;
+        margin: 54px 16px 14px 16px;
+    }
+    .content-img-invited{
+        line-height: 0;
+        width: 100%;
+        .img-invited{
+            height: auto;
+            width: 100%;
+            object-fit:cover;
+        }      
+    }
+}
+//SECCION TEMAS
+.topic-section{
+    .topic-title{
+        font-family:$typography-titles;
+        font-size: 36px;
+        color: $color-primary;
+        letter-spacing: 0;
+        line-height: 42px;
+        margin: 48px 16px 37px 16px;
+    }
+    .content-topic-display{
+        text-align: center;
+        .topic-img{
+            width: 108px;
+            height: 104px;
+        }
+        .topic-text{
+            font-family:$typography-semi;
+            font-size: 24px;
+            color:$color-primary;
+            letter-spacing: 0;
+            margin: 13px 0 49px 0;
+        }
+    }
+}
+//SECCION DE NOVEDADES
+.novelity-section{
+    text-align: center;
+    position: relative;
+    &::after{
+        display: block;
+        content: '';
+        background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        margin-top: -46px;
+        left: 0;
+        z-index: -1;
+        transform: skew(0, -5deg); 
+    } 
+    &::before{
+        display: block;
+        content: '';
+        background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        margin-top: -31px;
+        left: 0;
+        z-index: -1; 
+    }
+    .novelity-title{
+        font-family: $typography-titles;
+        font-size: 36px;
+        width: 100%;
+        color: $color-title-back;
+        letter-spacing: 0;
+        line-height: 42px;
+        margin: 106px 0 36px 0;
+    }
+    .novelity-button{
+        font-family: $typography-buttons;
+        font-size: 16px;
+        color: $color-primary;
+        letter-spacing: 0;
+        line-height: 22px;
+        background: $color-button;
+        width: 288px;
+        height: 48px;
+        margin: 36px 16px 67px 16px; 
+    }    
+}
+//SECCION FOOTER
+.footer-section{
+    text-align: center;
+    .footer-text{
+        font-family: $typography-items;
+        font-size: 14px;
+        color: $color-primary;
+        letter-spacing: 0;
+        line-height: 22px;
+        margin-bottom: 16px;
+    }
+    .footer-content{
+        display: flex;
+        justify-content: space-between;
+        padding: 0 45px 31px 45px;
+        .footer-img{
+            width: 16px;
+            height: 28px;
+            font-size: 16px;
+            color: $color-primary;
+            letter-spacing: 0;
+            line-height: 28px;
+        }    
+    }
+}
+@media (min-width:321px){
+    br{
+        display: none;
+    }
+    .novelity-section{
+        &::after{
+            margin-top: -65px;
+        } 
+    }
+    
+}
+@media (min-width:640px){
+    .header{  
+        height: 80px;
+        .logo{
+            margin: 22px 0 22px 60px;
+            .img-logo{
+                height: 36px;
+                width: 36px;
+            }
+        }  
+        .menu{
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            background:transparent;
+            width: auto;
+            top: 0;
+            padding-top: 0;
+            right: 0;
+            left: auto;
+            margin: 26px 100px 0 0;
+            .episode:hover{
+                color: $color-button;
+                text-decoration: line-through;
+            }
+            .episode:active{
+                color:$color-event;
+            }
+            .item-menu{
+                color:$color-primary;
+                margin:0;
+                width: 100%;
+                margin-left: 20px;
+                &.topical{
+                   margin-right: -70px;
+                }
+            }   
+        }
+        .burger,.closed,.check{
+            display: none;
+            position: absolute;
+        }
+    }
+    //TITULO Y DESCRIPCION 
+    .title-section{
+        margin: 100px 0px 0px 80px;
+        .title{
+            font-size: 64px; 
+            line-height: 84px;
+            .point{
+            color: $color-back;
+            }     
+        }
+        .text-desktop{
+            display: block;
+            font-size: 16px;
+            line-height: 24px;
+            margin-bottom: 56px; 
+        }
+        .text-movile{
+            display: none;
+        }
+        .know-more{
+            font-size: 18px;
+            line-height: 24px;
+            width: 226px;
+            height: 56px; 
+            cursor: pointer;
+            &:hover{
+                color: $color-title-back;
+                background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
+            } 
+            .text-button{
+                width: 108px;
+                height: 24px;
+            }
+        }
+    }
+    //SECCION EPISODIO -FONDO AZUL 
+    .episode-section{
+        &::after{
+            margin-top: -87px;
+            height: 100%;
+        }
+        .title-episode{
+            margin-top: 191px;
+        }
+        .content-spotify{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            .spotify{
+                width:  50%;
+                height: 232px;
+                margin: 20px 0 32px 0;
+            }
+            .spotify iframe{
+                width:100%; 
+                height: 260px;
+                border: none;
+            }
+            .rework,.ruby{
+                margin-bottom: 200px;
+            }
+        }   
+    }
+    //SECCION PHONE
+    .phone-section{
+        display: flex;
+        .img-phone{
+          margin-top: -25px;
+        }
+        .title-from{
+            margin-top: 65px;
+        }
+    }
+    //SECCION INVITADOS
+    .invited-section{
+        .title-invited{
+            font-size: 38px;
+        }
+        .content-img-invited{
+            display: flex;
+            flex-wrap: wrap;
+            .img-invited{
+                width: 50%;
+            }      
+        }
+    }
+    //SECCION TEMAS
+    .topic-section{
+        .topic-title{
+            font-size: 38px;
+        }
+        .content-topic-display{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            .topic{
+                width: 50%;
+                height: 104px;
+                margin-bottom:100px;  
+            }
+        }
+    }
+    //SECCION DE NOVEDADES
+    .novelity-section{
+        &::after{
+            margin-top: -94px; 
+        } 
+        .novelity-button{
+            width: 345px;
+            height: 56px;
+            margin-top: 0;
+            margin-bottom: 180px;
+        }    
+    }
+    .footer-section{
+        .footer-text{
+            font-size: 16px;
+        }
+    }   
+}
+@media (min-width:1440px){
+ //NAVEGACION
+    .header{ 
+        .logo{
+            margin: 22px 0 22px 100px;
+        }
+        .menu{
+            .item-menu{
+                height: 28px;
+                padding:0 48px 0 0;
+                margin-left: 0;
+                &.topical{
+                margin-right: -30px;
+                }
+
+            }   
+        }
+        .burger,.closed,.check{
+            display: none;
+            position: absolute;
+        }
+    }
+//TITULO Y DESCRIPCION
+    .title-section{
+        margin: 120px 500px 0px 200px;
+        .title{
+            font-size: 64px; 
+            line-height: 84px;
+            .point{
+                color: $color-back;
+            }     
+            br{
+                display: none;
+            }
+        }
+        .text-desktop{
+            display: block;
+            font-size: 16px;
+            line-height: 24px;
+            margin-bottom: 56px;   
+        }
+        .text-movile{
+            display: none;
+        }
+        .know-more{
+            font-size: 18px;
+            line-height: 24px;
+            width: 226px;
+            height: 56px; 
+            background: $color-button;
+            border: none; 
+            .text-button{
+                width: 108px;
+                height: 24px;
+            }
+        }
+    }
+//SECCION EPISODIO
+    .episode-section{
+        &::after{
+            margin-top: -124px;
+            height: 114%;  
+        }
+        .title-episode{
+            font-size: 48px;
+            line-height: 62px;
+            margin: 191px 0 26px 200px;
+        }
+        .content-spotify{
+            margin:0 100px 0 100px;
+            .spotify{
+                padding: 0;
+                margin: 0 0 72px 0;
+            }
+            .jsparty,.rework{
+                padding-right: 36px;
+            }
+            .syntax,.ruby{
+                padding-left: 36px;    
+            }
+            .rework,.ruby{
+                margin-bottom: 200px;
+            }
+        }
+
+    }
+//SECCION PHONE
+    .phone-section{
+        margin-top: -110px;
+        justify-content: center;
+        align-items: center;
+        .img-phone{
+            height: 660px;
+            margin:0 65px 0 20px;
+            width: auto;
+        }
+        .title-from{
+            line-height: 42px;
+            margin: 0 0 24px 16px;
+            font-size: 48px;
+        }
+        .content-text-from{
+            width: 464px;
+            height: 204px;
+            font-size: 16px;
+            line-height: 24px;
+            .one{
+            margin-bottom: 10px;    
+            }
+        }
+    }
+//SECCION INVITADOS
+    .invited-section{
+        .title-invited{
+            font-size: 48px;
+            line-height: 62px;
+            margin: 64px 0 36px 200px;
+        }
+        .content-img-invited{
+            .img-invited{
+                width: 33.3%;
+            }
+        }
+    }
+//SECCION TEMAS
+    .topic-section{
+        .topic-title{
+            font-size: 48px;
+            line-height: 62px;
+            margin: 64px 0 69px 200px;
+        }
+        .content-topic-display{
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-evenly;
+            margin: 69px 200px 0 200px;
+            .topic-text{
+                br{
+                    display: block;
+                }
+                font-size: 24px;
+                line-height: 32px;
+            }
+        }
+    }
+//SECCION DE NOVEDADES
+    .novelity-section{
+        text-align: center;
+        position: relative;
+        &::after{
+            margin-top: -168px;
+        } 
+        &::before{
+            margin-top: -1px;
+        }
+        .novelity-title{
+            font-size: 48px;
+            line-height: 62px;
+            margin:247px 0 0 0;
+        }
+        .novelity-button{
+            font-size: 18px;
+            line-height: 24px;
+            margin:36px 0 151px 0; 
+        }    
+    }
+//SECCION FOOTER
+    .footer-section{
+        display: flex;
+        justify-content: space-between;
+        width:100%;
+        height:95px;
+        .footer-text{
+            line-height: 28px;
+            margin:36px 0 31px 100px;
+        }
+        .footer-content{
+            width: 232px;
+            display: flex;
+            padding: 0;
+            margin: 36px 100px 31px 0;
+            .footer-img{
+                width: 18px;
+                height: 28px;
+                font-size: 18px;
+                line-height: 28px;
+            }    
+        }
+    }
+}
